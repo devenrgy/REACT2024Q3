@@ -75,11 +75,11 @@ class App extends React.Component {
 			<div className='grid h-full grid-rows-[min-content_1fr]'>
 				<Header updateError={this.updateError} updateUsers={this.updateUsers} />
 				<main className='container'>
-					<section className='grid h-full grid-rows-[80%_20%] py-8'>
+					<section className='grid grid-rows-[80%_20%] gap-20 py-8'>
 						<div>
 							<h1 className='mb-8 text-center text-4xl font-medium'>Star Wars characters</h1>
 							{!this.state.isLoading ? (
-								<ul className='flex flex-wrap gap-x-4 gap-y-8'>
+								<ul className='mb-10 flex flex-wrap gap-x-4 gap-y-8'>
 									{this.state.users &&
 										!!this.state.users.length &&
 										this.state.users.map((user) => {
@@ -90,7 +90,7 @@ class App extends React.Component {
 										})}
 								</ul>
 							) : (
-								<p className='flex h-[358px] items-center justify-center text-3xl'>Loading...</p>
+								<p className='flex h-[500px] items-center justify-center text-3xl'>Loading...</p>
 							)}
 						</div>
 						<Pagination

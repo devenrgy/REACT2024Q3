@@ -23,8 +23,9 @@ class Card extends React.Component<Props> {
 		}
 
 		return (
-			<li className='max-w-[300px] flex-grow basis-1/4 rounded border bg-blue-500 text-white'>
-				<h3 className='p-2 text-xl font-medium'>{this.state.user.name}</h3>
+			<li className='max-w-[400px] flex-grow basis-1/4 rounded border bg-blue-500 p-2 text-white'>
+				<h3 className='mb-2 text-xl font-medium'>{this.state.user.name}</h3>
+				<p className=''>{this.state.user.url}</p>
 			</li>
 		);
 	}
